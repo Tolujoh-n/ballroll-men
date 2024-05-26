@@ -6,6 +6,60 @@
 * License: https://bootstrapmade.com/license/
 */
 
+.wallet-address {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.wallet-address input {
+  width: 100%;
+  padding: 8px;
+  padding-right: 80px; /* Space for the copy button */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.copy-container {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.copy-text {
+  margin-right: 4px;
+  font-size: 14px;
+}
+
+.copy-icon {
+  font-size: 14px;
+}
+
+.application-number input {
+  padding: 8px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
 /**
 * Check out variables.css for easy customization of colors, typography, and other repetitive properties
 */
@@ -215,6 +269,8 @@ section {
   padding: 15px 0;
   transition: all 0.5s;
   z-index: 997;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 #header.header-scrolled,
@@ -561,13 +617,13 @@ section {
 --------------------------------------------------------------*/
 
 #hero .icon-boxes {
-  margin-top: 100px;
+  margin-top: 20px;
 }
 
 #hero .icon-box {
-  padding: 50px 30px;
+  padding: 20px 10px;
   position: relative;
-  border: 1px solid gray;
+  border: 1px solid #ccc;
   overflow: hidden;
   background: #fff;
   box-shadow: 0 0 29px 0 rgba(18, 66, 101, 0.08);
@@ -648,7 +704,7 @@ section {
   background: url("../img/hero-bg.png") center center;
   background-size: cover;
   position: relative;
-  padding: 120px 0 60px;
+  padding: 60px 0 60px;
 }
 
 .hero-animated h2 {
