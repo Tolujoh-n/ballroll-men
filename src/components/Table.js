@@ -101,14 +101,14 @@ const Table = () => {
       </style>
       <div className="table-container">
         <div className="table-wrapper">
-          <table className="table table-striped">
+          <table style={{ color: "gray" }} className="table table-striped">
             <thead>
               <tr>
-                <th>Hash</th>
-                <th>Participant Wallet</th>
-                <th>Value</th>
-                <th>Receive SOL</th>
-                <th>Status</th>
+                <th style={{ color: "gray" }}>Hash</th>
+                <th style={{ color: "gray" }}>Participant Wallet</th>
+                <th style={{ color: "gray" }}>Value</th>
+                <th style={{ color: "gray" }}>Receive SOL</th>
+                <th style={{ color: "gray" }}>Status</th>
               </tr>
             </thead>
             <tbody>
@@ -117,11 +117,11 @@ const Table = () => {
                   key={pay.id}
                   className={index === 0 && highlight ? "highlight" : ""}
                 >
-                  <td>{pay.hash}</td>
-                  <td>{pay.participantwallet}</td>
-                  <td>{pay.valuesol}</td>
-                  <td>{pay.receivesol}</td>
-                  <td className="status" style={{ color: "green" }}>
+                  <td style={{ color: "gray" }}>{pay.hash}</td>
+                  <td style={{ color: "gray" }}>{pay.participantwallet}</td>
+                  <td style={{ color: "gray" }}>{pay.valuesol}</td>
+                  <td style={{ color: "gray" }}>{pay.receivesol}</td>
+                  <td className="status" style={{ color: "#059652" }}>
                     {pay.Status}
                   </td>
                 </tr>

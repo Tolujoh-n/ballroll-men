@@ -22,7 +22,9 @@ const Home = () => {
             alt="Hero"
           />
           <h2>
-            Solana Foundation's <br /> 500,000 SOL Giveaway
+            <b>
+              Solana Foundation's <br /> 500,000 SOL Giveaway
+            </b>
           </h2>
           <p>
             The past couple of years our journey has been filled with
@@ -34,7 +36,7 @@ const Home = () => {
             holders.
           </p>
           <div className="d-flex">
-            <Link to="/sol" className="btn btn-primary btn-lg">
+            <Link to="/sol" className="btn btn-success btn-lg">
               Join Now
             </Link>
           </div>

@@ -1,10 +1,18 @@
-/**
-* Template Name: HeroBiz
-* Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
-* Updated: Mar 17 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
+#paralogo {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#tagspa {
+  background-color: #ecfff9;
+  color: green;
+  padding: 2px 3px;
+  border-radius: 20px;
+}
+
 
 .wallet-address {
   display: flex;
@@ -656,7 +664,7 @@ section {
   transition: all 0.3s ease-in-out;
   font-size: 36px;
   line-height: 1;
-  color: #2487ce;
+  color: #24c8ce;
 }
 /* 
 #hero .icon-box:hover {

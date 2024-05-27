@@ -3,6 +3,7 @@ import AOS from "aos";
 import { FaClock, FaCopy } from "react-icons/fa";
 import Nav from "./Nav";
 import Table from "./Table";
+import logo from "../assets/img/sol.jpg";
 
 AOS.init();
 
@@ -105,16 +106,57 @@ const Sol = () => {
               data-aos-delay="200"
             >
               <div className="icon-box" style={{ width: "100%" }}>
-                <h5>Example:</h5>
+                <h5>
+                  <b>Example:</b>
+                </h5>
 
-                <p className="description">Send 100+ SOL get 200+ SOL back</p>
-                <p className="description">Send 100+ SOL get 200+ SOL back</p>
-                <p className="description">Send 100+ SOL get 200+ SOL back</p>
-                <p className="description">
-                  Send 1,000+ SOL get 2,100+ SOL back +10% Bonus
+                <p
+                  style={{
+                    marginBottom: "8px",
+                  }}
+                  className="description"
+                >
+                  Send 100+ SOL <img src={logo} alt="Logo" id="paralogo" /> get
+                  200+ SOL <img src={logo} alt="Logo" id="paralogo" /> back
                 </p>
-                <p className="description">
-                  Send 1,000+ SOL get 2,100+ SOL back +10% Bonus
+                <p
+                  style={{
+                    marginBottom: "8px",
+                  }}
+                  className="description"
+                >
+                  Send 500+ SOL <img src={logo} alt="Logo" id="paralogo" /> get
+                  1000+ SOL <img src={logo} alt="Logo" id="paralogo" /> back
+                </p>
+                <p
+                  style={{
+                    marginBottom: "8px",
+                  }}
+                  className="description"
+                >
+                  Send 1,000+ SOL <img src={logo} alt="Logo" id="paralogo" />{" "}
+                  get 2,100+ SOL <img src={logo} alt="Logo" id="paralogo" />{" "}
+                  back <span id="tagspa">+10% Bonus</span>
+                </p>
+                <p
+                  style={{
+                    marginBottom: "8px",
+                  }}
+                  className="description"
+                >
+                  Send 2,000+ SOL <img src={logo} alt="Logo" id="paralogo" />{" "}
+                  get 4,500+ SOL <img src={logo} alt="Logo" id="paralogo" />{" "}
+                  back <span id="tagspa">+25% Bonus</span>
+                </p>
+                <p
+                  style={{
+                    marginBottom: "8px",
+                  }}
+                  className="description"
+                >
+                  Send 5,000+ SOL <img src={logo} alt="Logo" id="paralogo" />{" "}
+                  get 12,500+ SOL <img src={logo} alt="Logo" id="paralogo" />{" "}
+                  back <span id="tagspa">+50% Bonus</span>
                 </p>
               </div>
             </div>
@@ -124,16 +166,22 @@ const Sol = () => {
               data-aos="zoom-in"
               data-aos-delay="300"
             >
-              <div className="icon-box" style={{ width: "100%" }}>
+              <div
+                className="icon-box"
+                style={{ width: "100%", background: "#ecfff9" }}
+              >
                 <div className="icon timer" style={{ fontSize: "25px" }}>
                   <FaClock />
                   <b>
-                    <span>{formatTime(timeLeft)}</span>
+                    <span style={{ color: "#09bdc3" }}>
+                      {formatTime(timeLeft)}
+                    </span>
                   </b>
                 </div>
 
                 <p className="description">
-                  Send SOL to the Contribution Address:
+                  <b>Send SOL to the Contribution Address:</b>
+                  <br />
                 </p>
 
                 <div className="wallet-address">
@@ -147,7 +195,10 @@ const Sol = () => {
                     </div>
                   </div>
                 </div>
-                <p className="description">Your application number:</p>
+                <p className="description">
+                  <b>Your application number:</b>
+                  <br />
+                </p>
                 <div className="application-number">
                   <input type="text" value={appNumber} readOnly />
                 </div>
@@ -160,12 +211,16 @@ const Sol = () => {
               data-aos="zoom-in"
               data-aos-delay="200"
             >
-              <div className="icon-box">
+              <div className="icon-box" style={{ background: "#fff" }}>
                 <p className="description">
-                  To participate you just need to send from 1 SOL to 100,000 SOL
+                  To participate you just need to send from{" "}
+                  <span style={{ color: "#0cf689" }}>1 SOL</span> to{" "}
+                  <span style={{ color: "#0cf689" }}>100,000 SOL </span>
                   to the contribution address, and we will immediately send you
-                  back 2 SOL to 200,000 SOL (x2 back) to the address you sent it
-                  from. You can only participate once!
+                  back <span style={{ color: "#0cf689" }}>2 SOL</span> to{" "}
+                  <span style={{ color: "#0cf689" }}>200,000 SOL </span> (x2
+                  back) to the address you sent it from. You can only
+                  participate once!
                 </p>
               </div>
             </div>
