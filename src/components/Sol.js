@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import { FaClock, FaCopy } from "react-icons/fa";
+import QRCode from "qrcode.react";
+import { Dialog, IconButton } from "@mui/material";
+import QrCodeIcon from "@mui/icons-material/QrCode";
 import Nav from "./Nav";
 import Table from "./Table";
 import logo from "../assets/img/sol.jpg";
@@ -23,6 +26,16 @@ const Sol = () => {
     "71ocfzveVjJYoSY1fYKTH3PUSveiGURcJELknmUMpwgP"
   );
   const [appNumber] = useState(generateAppNumber());
+  const [open, setOpen] = useState(false);
+  const solanaAddress = "71ocfzveVjJYoSY1fYKTH3PUSveiGURcJELknmUMpwgP";
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -179,10 +192,47 @@ const Sol = () => {
                   </b>
                 </div>
 
-                <p className="description">
-                  <b>Send SOL to the Contribution Address:</b>
-                  <br />
-                </p>
+                <div>
+                  <div className="d-flex justify-content-between align-items-center">
+                    {/* First word with icon */}
+                    <div>
+                      <span>
+                        <p className="description" style={{ margin: 0 }}>
+                          <b>Send SOL to the Contribution Address:</b>
+                        </p>
+                      </span>
+                    </div>
+                    {/* Second word */}
+                    <div>
+                      <span>
+                        <IconButton
+                          onClick={handleClickOpen}
+                          style={{ marginLeft: "10px" }}
+                        >
+                          <QrCodeIcon fontSize="large" />
+                        </IconButton>
+                      </span>
+                    </div>
+                  </div>
+
+                  <Dialog onClose={handleClose} open={open}>
+                    <div style={{ position: "relative", padding: "20px" }}>
+                      <QRCode value={solanaAddress} size={256} renderAs="svg" />
+                      <img
+                        src={logo}
+                        alt="Solana Logo"
+                        style={{
+                          position: "absolute",
+                          top: "50%",
+                          left: "50%",
+                          transform: "translate(-50%, -50%)",
+                          width: "50px",
+                          height: "50px",
+                        }}
+                      />
+                    </div>
+                  </Dialog>
+                </div>
 
                 <div className="wallet-address">
                   <div className="input-wrapper">

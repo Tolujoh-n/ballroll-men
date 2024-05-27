@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // css
@@ -11,6 +11,29 @@ import Home from "./components/Home";
 import Sol from "./components/Sol";
 
 function App() {
+  useEffect(() => {
+    const handleContextMenu = (event) => {
+      event.preventDefault();
+    };
+
+    const handleKeyDown = (event) => {
+      if (
+        event.keyCode === 123 || // F12
+        (event.ctrlKey && event.shiftKey && event.keyCode === 73) // Ctrl+Shift+I
+      ) {
+        event.preventDefault();
+      }
+    };
+
+    document.addEventListener("contextmenu", handleContextMenu);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("contextmenu", handleContextMenu);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   return (
     <Router>
       <Routes>
