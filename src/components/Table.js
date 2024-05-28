@@ -59,6 +59,7 @@ const Table = () => {
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
           }
 
           .table-wrapper {
@@ -68,12 +69,14 @@ const Table = () => {
           .table {
             margin: 0;
             font-family: 'Arial', sans-serif;
+            width: 100%; /* Make table full width */
             min-width: 600px; /* Ensures table maintains a minimum width */
           }
 
           .table th, .table td {
             border-top: 1px solid #dee2e6;
             border-bottom: none;
+            word-wrap: break-word; /* Allows long text to break and wrap */
           }
 
           .highlight {
@@ -96,6 +99,22 @@ const Table = () => {
 
           .table thead th {
             border-top: none;
+          }
+
+          @media (max-width: 600px) {
+            .table-wrapper {
+              padding: 0;
+              margin: 0;
+            }
+
+            .table {
+              width: 100%; /* Ensure the table spans the full width of the container */
+              min-width: unset; /* Remove the minimum width on small screens */
+            }
+
+            .table-container {
+              border: none; /* Optional: remove border for a cleaner look on small screens */
+            }
           }
         `}
       </style>

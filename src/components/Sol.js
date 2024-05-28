@@ -343,11 +343,8 @@ const Sol = () => {
               </div>
             </div>
           </div>
-          <br />
 
-          <div className="col-12  icon-boxes">
-            <Table />
-          </div>
+          <Table />
         </div>
       </section>
     </>
