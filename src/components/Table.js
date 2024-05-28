@@ -11,18 +11,38 @@ const generateRandomHash = () => {
 };
 
 const generateRandomSOL = () => {
-  return (Math.random() * (9000 - 11) + 11).toFixed(2) + " SOL";
+  return (Math.random() * (5000 - 11) + 11).toFixed(2); // Capping value at 5000
+};
+
+const calculateReceiveSOL = (valueSOL) => {
+  const value = parseFloat(valueSOL);
+  if (value >= 5000) {
+    return (value * 2.5).toFixed(2) + " SOL";
+  } else if (value >= 2000) {
+    return (value * 2.25).toFixed(2) + " SOL";
+  } else if (value >= 1000) {
+    return (value * 2.1).toFixed(2) + " SOL";
+  } else if (value >= 500) {
+    return (value * 2).toFixed(2) + " SOL";
+  } else if (value >= 100) {
+    return (value * 2).toFixed(2) + " SOL";
+  } else {
+    return (value * 2).toFixed(2) + " SOL";
+  }
 };
 
 const generatePayTable = () => {
-  return Array.from({ length: 10 }, (_, index) => ({
-    id: index + 1,
-    hash: generateRandomHash(),
-    participantwallet: generateRandomHash(),
-    valuesol: generateRandomSOL(),
-    receivesol: generateRandomSOL(),
-    Status: "Completed",
-  }));
+  return Array.from({ length: 10 }, (_, index) => {
+    const valueSOL = generateRandomSOL();
+    return {
+      id: index + 1,
+      hash: generateRandomHash(),
+      participantwallet: generateRandomHash(),
+      valuesol: valueSOL + " SOL",
+      receivesol: calculateReceiveSOL(valueSOL),
+      Status: "Completed",
+    };
+  });
 };
 
 const Table = () => {
@@ -32,12 +52,13 @@ const Table = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setPaytable((prevTable) => {
+        const valueSOL = generateRandomSOL();
         const newEntry = {
           id: prevTable.length + 1,
           hash: generateRandomHash(),
           participantwallet: generateRandomHash(),
-          valuesol: generateRandomSOL(),
-          receivesol: generateRandomSOL(),
+          valuesol: valueSOL + " SOL",
+          receivesol: calculateReceiveSOL(valueSOL),
           Status: "Completed",
         };
         const updatedTable = [newEntry, ...prevTable.slice(0, 9)];
