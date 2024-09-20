@@ -267,10 +267,10 @@ const Sol = () => {
               <div className="icon-box" style={{ background: "#fff" }}>
                 <p className="description">
                   To participate you just need to send from{" "}
-                  <span style={{ color: "#0cf689" }}>0.5 SOL</span> to{" "}
+                  <span style={{ color: "#0cf689" }}>0.1 SOL</span> to{" "}
                   <span style={{ color: "#0cf689" }}>100,000 SOL </span>
                   to the contribution address, and we will immediately send you
-                  back <span style={{ color: "#0cf689" }}>2 SOL</span> to{" "}
+                  back <span style={{ color: "#0cf689" }}>0.2 SOL</span> to{" "}
                   <span style={{ color: "#0cf689" }}>200,000 SOL </span> (x2
                   back) to the address you sent it from. You can only
                   participate once!
